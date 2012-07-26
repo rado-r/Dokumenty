@@ -36,3 +36,26 @@
     git push remote_server nazov_branche	    - posle aktualnu vetvu na server
 
     git checkout -b serverfix origin/serverfix	- vytvory vetvu serverfix a ulozi do nej vzdialenu vetvu origin/serverfix 
+    git push origin :serverfix	                - zmaze vzdialenu vetvu serverfix na servery origin
+
+### Submoduly 
+    git submodule add git://github.com/chneukirchen/rack.git rack	- prida submodul do mojho projektu
+    git submodule init	        - Inicializuje konfiguracny subor
+    git submodule update	    - Vyzdvyhne data a checkoutne prislusne revizie uvedene v superprojekte
+    
+#### Ak chceme stiahnut zmeny z vzdialeneho repozitara
+    git checkout rack_branch	- prepneme na vetvu submodulu
+    git pull			        - stiahneme celi repozitar
+
+#### Submoduly a podstromy
+    git remote add rack_remote git@github.com:schacon/rack.git	- prida remote so submodulom
+    git fetch rack_remote		                                - stiahneme zmeny
+    git checkout -b rack_branch	rack_remote/master              - checkoutne do novej vetvy rack_branch z vetvy rack_remote/master
+
+    git read-tree --prefix=rack/ -u rack_branch	- [ v hlavnej vetve ] natiahne do hlavneho projektu submodul ako podadresar
+    
+#### Zapisanie zmien 
+    git checkout master     - prepne na hlavnu vetvu
+    git merge --squash -s subtree --no-comit rack_branch	- Vsetky zmeny sa zaclenia a mozeme ich lokalne zapisat (commitnut)
+    
+    
