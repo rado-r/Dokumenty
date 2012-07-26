@@ -17,5 +17,6 @@
 ### Praca zo subormi
     git rm file.txt		        - zmaze subor aj z disku aj z repozitara
     git rm --cached file.txt	- zmaze subor iba z repozitara na disku ostane
-
+    
     git mv file_from file_to	- presunie alebo premenuje subor
+
