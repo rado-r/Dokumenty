@@ -20,7 +20,7 @@
     
     git mv file_from file_to	- presunie alebo premenuje subor
 
-### Vetvy - branch
+### Vetvy - git branch
     git branch                  - vypise aktualne vetvy (branches)
     git branch nazov_vetvy		- vytvori novu vetvu z aktualneho commitu
     git branch -d nazov_vetvy 	- zmaze vetvu
@@ -28,3 +28,11 @@
     git branch --no-merged      - vypise nezaclenene vetvy
 
     git checkout -b new odkaz   - vytvory vetvu s nazvom "new" ktora bude odrazat commit z odkazu
+
+### Vzdialeny repozitar - git remote
+    git remote add pb git://github.com/paulboone/ticgit.git	- prida remote repozitar a pomenuje ho pb
+    git remote rename pb paul	                - premenuje vzdialeny repozitar z pb na paul
+    git fetch pb		                        - Stiahne data z repozitara pb
+    git push remote_server nazov_branche	    - posle aktualnu vetvu na server
+
+    git checkout -b serverfix origin/serverfix	- vytvory vetvu serverfix a ulozi do nej vzdialenu vetvu origin/serverfix 
