@@ -32,7 +32,8 @@
 ### Vzdialeny repozitar - git remote
     git remote add pb git://github.com/paulboone/ticgit.git	- prida remote repozitar a pomenuje ho pb
     git remote rename pb paul	                - premenuje vzdialeny repozitar z pb na paul
-    git fetch pb		                        - Stiahne data z repozitara pb
+    git fetch pb		                        - Stiahne data z repozitara
+    git pull pb					- pouzije git fetch a nan aplikuje git merge
     git push remote_server nazov_branche	    - posle aktualnu vetvu na server
 
     git checkout -b serverfix origin/serverfix	- vytvory vetvu serverfix a ulozi do nej vzdialenu vetvu origin/serverfix 
@@ -45,7 +46,7 @@
     
 #### Ak chceme stiahnut zmeny z vzdialeneho repozitara
     git checkout rack_branch	- prepneme na vetvu submodulu
-    git pull			        - stiahneme celi repozitar
+    git pull			        - stiahne zmeny a aplikuje ich pomocou "git merge"
 
 #### Submoduly a podstromy
     git remote add rack_remote git@github.com:schacon/rack.git	- prida remote so submodulom
